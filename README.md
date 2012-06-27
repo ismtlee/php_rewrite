@@ -5,6 +5,7 @@ A simple framework showing how to handle rewriting.
 
 A nginx configuration sample should like this,
 
+<pre>
 server {
    listen 80; 
    server_name rw.lee.com;
@@ -30,7 +31,7 @@ server {
       include        fastcgi_params;
    }   
 }
-
+</pre>
 When we call http://rw.lee.com/client/LogService/logHour/,
 http://rw.lee.com/main.php?service=LogService&cmd=logHour called at last.
 
