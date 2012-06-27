@@ -16,7 +16,7 @@ server {
 
    location ~ ^/client/(.*)$ {
     rewrite ^/client/(.*)/(.*)/(.*)$ /main.php?service=$1&cmd=$2&args=$3 break;
-    rewrite ^(.*)$ 400 break;
+    rewrite ^(.*)$ 404 break;
     proxy_pass http://127.0.0.1;
     break;
    }   
